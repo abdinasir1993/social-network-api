@@ -1,4 +1,5 @@
 const { Schema, model } = require('mongoose');
+const reactionSchema = require('./reaction');
 
 const ThoughtSchema = {
   thoughtText: {
@@ -12,16 +13,13 @@ const ThoughtSchema = {
     default: Date.now,
     //Use a getter method to format the timestamp on query
   },
-  username: {
-    type: String,
-    required: true,
-    minLength: 2,
-    maxLength: 50,
-  },
-  reactions: {
-    //Array of nested documents created with the reactionSchema
-    type: Object,
-  },
+  user: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: 'User',
+    },
+  ],
+  reactions: [reactionSchema],
 };
 
 const schema = new Schema(ThoughtSchema);

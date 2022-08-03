@@ -17,14 +17,13 @@ const userSchema = {
     trim: true,
     unique: true,
   },
-  thoughts: {
-    type: String,
-    trim: true,
-  },
-  friends: {
-    type: String,
-    trim: true,
-  },
+  thoughts: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: 'Thought',
+    },
+  ],
+  friends: [userSchema],
 };
 
 const schema = new Schema(userSchema);

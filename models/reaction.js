@@ -1,37 +1,26 @@
 const { Schema } = require('mongoose');
 
 const reactionSchema = {
-  reaction1: {
+  reactionId: {
     type: String,
     required: true,
-    minLength: 2,
-    maxLength: 50,
-    trim: true,
-    unique: true,
   },
-  reaction2: {
+  reactionBody: {
     type: String,
     required: true,
     minLength: 2,
-    maxLength: 50,
-    trim: true,
-    unique: true,
+    maxLength: 280,
   },
-  reaction3: {
-    type: String,
-    required: true,
-    minLength: 2,
-    maxLength: 50,
-    trim: true,
-    unique: true,
-  },
-  reaction4: {
-    type: String,
-    required: true,
-    minLength: 2,
-    maxLength: 50,
-    trim: true,
-    unique: true,
+  user: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: 'User',
+    },
+  ],
+  createdAt: {
+    type: Date,
+    default: Date.now,
+    //Use a getter method to format the timestamp on query
   },
 };
 
