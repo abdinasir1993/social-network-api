@@ -1,20 +1,16 @@
 const { Schema } = require('mongoose');
 
 const reactionSchema = {
-  reactionId: {
-    type: String,
-    required: true,
-  },
   reactionBody: {
     type: String,
     required: true,
     minLength: 2,
     maxLength: 280,
   },
-  user: [
+  username: [
     {
-      type: Schema.Types.ObjectId,
-      ref: 'User',
+      type: String,
+      required: true,
     },
   ],
   createdAt: {

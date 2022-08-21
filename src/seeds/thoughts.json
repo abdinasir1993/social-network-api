@@ -1,14 +1,32 @@
 [
     {
         "thoughtText":"successfully seeded",
-"username":"abdinasir1993"
+"username":"abdinasir1993",
+ "reactions": [
+      {
+        "reactionBody": "This is the body of the reaction",
+        "userName": "ahmed1993"
+      }
+    ]
     },
     {
         "thoughtText":"successfully seeded 2",
-"username":"abdinasir1993"
+"username":"abdinasir1993",
+"reactions": [
+    {
+      "reactionBody": "This is the body of the reaction",
+      "username": "ali1993"
+    }
+  ]
     },
     {
         "thoughtText":"successfully seeded 3",
-"username":"abdinasir1993"
+"username":"abdinasir1993",
+"reactions": [
+    {
+      "reactionBody": "This is the body of the reaction",
+      "userName": "peter1993"
+    }
+  ]
     }
 ]

@@ -67,7 +67,7 @@ const deleteUser = async (req, res) => {
     res.status(200).json({ success: true });
   } catch (error) {
     console.log(
-      `[ERROR]:please try again could not complete request ${error.message}`
+      `[ERROR]:YOU WERE SUPPOSE TO FOLLOW THE TRAIN CJ!| ${error.message}`
     );
   }
 };
